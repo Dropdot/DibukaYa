@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JanganMarahLagiYaSayang</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      margin-top: 20px;
+      color: #777;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button.secondary {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hai Kamu</h1>
+  <p>
+    404 eror
+  </p>
+  <p>
+    Kan eror ga di maapin sih
+  </p>
+  <p>
+    Maapin dulu yu biar ga eror lagi biar contentnya bisa di buka
+  </p>
+
+  <!-- Tombol 1 -->
+  <div class="button-container">
+    <button onclick="maafin()">Maafin</button>
+  </div>
+
+  <!-- Tombol 2 -->
+  <div class="button-container">
+    <button class="secondary" onclick="gaMau()">Ga mau</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  &copy; ga sempurna tapi dibuat dengan sepenuh hati
+</div>
+
+<script>
+  function maafin() {
+    // Menampilkan alert
+    alert('Yay akhirnya di maapin');
+
+    // Mengarahkan ke link lain setelah tombol OK ditekan
+    window.location.href = 'https://wa.me/+6281214743947';
+  }
+
+
+  function gaMau() {
+    // Mendapatkan tombol dengan class "secondary"
+    const secondaryButton = document.querySelector('.secondary');
+
+    // Mendapatkan ukuran layar
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Mendapatkan nilai acak untuk posisi dan dimensi tombol
+    const randomX = Math.floor(Math.random() * (screenWidth - 100));
+    const randomY = Math.floor(Math.random() * (screenHeight - 40));
+    const randomWidth = Math.floor(Math.random() * 100) + 50;
+    const randomHeight = Math.floor(Math.random() * 40) + 20;
+
+    // Mengubah posisi dan dimensi tombol
+    secondaryButton.style.position = 'absolute';
+    secondaryButton.style.left = `${randomX}px`;
+    secondaryButton.style.top = `${randomY}px`;
+    secondaryButton.style.width = `${randomWidth}px`;
+    secondaryButton.style.height = `${randomHeight}px`;
+  }
+
+</script>
+
+</body>
+</html>
